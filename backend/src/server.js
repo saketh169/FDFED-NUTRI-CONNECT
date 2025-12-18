@@ -102,8 +102,8 @@ app.use('/api/analytics', notificationRoutes);
 const path = require('path');
 app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 
-// SPA routing - serve index.html for all non-API routes
-app.get('/*', (req, res) => {
+// SPA routing - serve index.html for all non-API routes (must be last)
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
 });
 
