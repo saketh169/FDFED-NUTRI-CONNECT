@@ -5,12 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "build": "cd ../frontend && npm install && npm run build",
+    "dev": "nodemon src/server.js", 
+    "build": "cd ../frontend && npm run build",
+
     "seed:dietitians": "node src/scripts/seedDietitians.js",
-    "seed:settings": "node src/scripts/seedSettings.js"
+    "seed:settings": "node src/scripts/seedSettings.js",
+    "seed:chatbot": "node src/scripts/seedChatbot.js"
   },
+
+  "_comments": {
+    "start": "Production - Render",
+    "dev": "Development - Auto-restart"
+  },
+  
   "author": "",
   "license": "ISC",
   "dependencies": {
