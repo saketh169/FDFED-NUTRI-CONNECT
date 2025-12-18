@@ -14,13 +14,16 @@ export default defineConfig({
     }
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
-          'utils': ['axios']
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'http-client': ['axios'],
+          'ui-library': ['antd'],
+          'form-libs': ['formik', 'yup'],
+          'state': ['zustand', 'redux'],
+          'crypto': ['crypto-js']
         }
       }
     }
