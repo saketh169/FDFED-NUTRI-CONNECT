@@ -41,10 +41,6 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }));
 // Serve static files from uploads directory
 app.use('/uploads', express.static('uploads'));
 
-// Serve static files from frontend build
-const path = require('path');
-app.use(express.static(path.join(__dirname, '../../frontend/dist')));
-
 // --- API Routes ---
 // Auth routes mounted at '/api' for signup and signin
 app.use('/api', authRoutes);
@@ -106,11 +102,6 @@ app.use('/api/analytics', notificationRoutes);
 // Simple test route (kept from your original code)
 app.get('/', (req, res) => {
   res.json({ message: 'Server is running!' });
-});
-
-// Catch-all handler: send back index.html for any non-API routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
 });
 
 // Start server

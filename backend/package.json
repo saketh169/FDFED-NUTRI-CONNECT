@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd ../frontend && rm -rf node_modules package-lock.json && npm install --legacy-peer-deps && npm run build && cd ../backend",
-    "start": "npm run build && node src/server.js",
+    "start": "nodemon src/server.js",
     "seed:dietitians": "node src/scripts/seedDietitians.js",
     "seed:settings": "node src/scripts/seedSettings.js"
   },
