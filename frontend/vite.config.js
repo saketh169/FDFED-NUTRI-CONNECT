@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      '/api': 'http://localhost:5000'
+      '/api': 'https://nutriconnect-backend-1tc3.onrender.com'
     }
   },
   build: {
