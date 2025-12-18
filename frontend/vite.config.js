@@ -12,20 +12,5 @@ export default defineConfig({
     proxy: {
       '/api': 'http://localhost:5000'
     }
-  },
-  build: {
-    chunkSizeWarningLimit: 600,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'http-client': ['axios'],
-          'ui-library': ['antd'],
-          'form-libs': ['formik', 'yup'],
-          'state': ['zustand', 'redux'],
-          'crypto': ['crypto-js']
-        }
-      }
-    }
   }
 })
