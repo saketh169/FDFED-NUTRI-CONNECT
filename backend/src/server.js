@@ -98,14 +98,16 @@ app.use('/api/settings', settingsRoutes);
 // Notification routes mounted at '/api/analytics'
 app.use('/api/analytics', notificationRoutes);
 
+// Serve static files from frontend dist folder
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 
-// Simple test route (kept from your original code)
-app.get('/', (req, res) => {
-  res.json({ message: 'Server is running!' });
+// SPA routing - serve index.html for all non-API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
 });
 
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
- 
 });
