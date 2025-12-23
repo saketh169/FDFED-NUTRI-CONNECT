@@ -1,5 +1,16 @@
 # FDFED-NUTRI-CONNECT
 
+---
+
+## Deployment
+
+The MERN application is deployed on the following platforms:
+
+- **Vercel**: https://fdfed-nutri-connect.onrender.com/
+
+- **Render**: https://fdfed-nutri-connect.onrender.com/
+---
+
 This project consists of a backend and frontend setup. The backend is a Node.js-based server, while the frontend is a React application :
 
 - **`backend/`**: Root directory for the backend.
