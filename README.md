@@ -6,7 +6,7 @@
 
 The MERN application is deployed on the following platforms:
 
-- **Vercel**: https://fdfed-nutri-connect.onrender.com/
+- **Vercel**: https://fdfed-nutri-connect.vercel.app
 
 - **Render**: https://fdfed-nutri-connect.onrender.com/
 ---
